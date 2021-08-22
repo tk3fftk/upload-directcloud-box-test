@@ -1,0 +1,31 @@
+{
+  "name": "upload-directcloud-box-action",
+  "version": "1.0.0",
+  "description": "Upload artifacts to DirectCloud-BOX from GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --exit-on-fatal-error ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tk3fftk/upload-DirectCloud-BOX-action.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript",
+    "DirectCloud-BOX"
+  ],
+  "author": "tk3fftk",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "axios": "^0.21.1",
+    "file-type": "^16.5.3",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.29.2",
+    "eslint": "^7.32.0"
+  }
+}

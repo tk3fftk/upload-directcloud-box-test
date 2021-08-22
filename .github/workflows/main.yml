@@ -20,4 +20,9 @@ jobs:
       DIRECTCLOUDBOX_FILE_PATH: "README.md"
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12"
+      - run: npm ci
+      - run: node index.js
       - uses: tk3fftk/upload-DirectCloud-BOX-action@v0.2
