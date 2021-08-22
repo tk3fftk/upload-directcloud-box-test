@@ -25,4 +25,4 @@ jobs:
           node-version: "12"
       - run: npm ci
       - run: node index.js
-      - uses: tk3fftk/upload-DirectCloud-BOX-action@relative-path
+      - uses: tk3fftk/upload-DirectCloud-BOX-action@v1
