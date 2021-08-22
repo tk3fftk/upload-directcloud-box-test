@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DIRECTCLOUDBOX_SERVICE: ${{ secrets.DIRECTCLOUDBOX_SERVICE }}
+      DIRECTCLOUDBOX_SERVICE_KEY: ${{ secrets.DIRECTCLOUDBOX_SERVICE_KEY }}
+      DIRECTCLOUDBOX_CODE: ${{ secrets.DIRECTCLOUDBOX_CODE }}
+      DIRECTCLOUDBOX_ID: ${{ secrets.DIRECTCLOUDBOX_ID }}
+      DIRECTCLOUDBOX_PASSWORD: ${{ secrets.DIRECTCLOUDBOX_PASSWORD }}
+      DIRECTCLOUDBOX_NODE: "1"
+      DIRECTCLOUDBOX_FILE_PATH: "index.js"
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - uses: tk3fftk/upload-DirectCloud-BOX-action@v0.1
