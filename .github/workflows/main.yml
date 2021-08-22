@@ -20,4 +20,4 @@ jobs:
       DIRECTCLOUDBOX_FILE_PATH: "README.md"
     steps:
       - uses: actions/checkout@v2
-      - uses: tk3fftk/upload-DirectCloud-BOX-action@v0.1
+      - uses: tk3fftk/upload-DirectCloud-BOX-action@v0.2
