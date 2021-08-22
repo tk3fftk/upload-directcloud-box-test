@@ -17,8 +17,7 @@ jobs:
       DIRECTCLOUDBOX_ID: ${{ secrets.DIRECTCLOUDBOX_ID }}
       DIRECTCLOUDBOX_PASSWORD: ${{ secrets.DIRECTCLOUDBOX_PASSWORD }}
       DIRECTCLOUDBOX_NODE: "1"
-      DIRECTCLOUDBOX_FILE_PATH: "index.js"
+      DIRECTCLOUDBOX_FILE_PATH: "README.md"
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
       - uses: tk3fftk/upload-DirectCloud-BOX-action@v0.1
